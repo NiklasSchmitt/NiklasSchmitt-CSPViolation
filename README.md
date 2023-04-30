@@ -13,4 +13,3 @@ The required Znuny webservice will be installed and configured within the packag
 
 ## Help & Support
 Please report Bugs or ask your questions via [GitHub Issues](https://github.com/NiklasSchmitt/NiklasSchmitt-CSPViolation/issues/new).
-
