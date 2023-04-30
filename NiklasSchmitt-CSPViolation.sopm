@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<otrs_package version="1.0">
+    <Name>NiklasSchmitt-CSPViolation</Name>
+    <Version>1.0.0</Version>
+    <Framework>6.5.x</Framework>
+    <Vendor>Niklas Schmitt</Vendor>
+    <URL>https://niklas-schmitt.de</URL>
+    <License>GNU AFFERO GENERAL PUBLIC LICENSE Version 3, November 2007</License>
+    <Description Lang="en">Receive information about violations against Contet-Security-Policy via Znuny webservice.</Description>
+    <Description Lang="de">Erhalte Informationen bei Verstößen gegen die Contet-Security-Policy über einen Znuny Webservice.</Description>
+    <Filelist>
+        <File Permission="660" Location="Kernel/Autoload/NiklasSchmittCSPViolation.pm"/>
+        <File Permission="660" Location="Kernel/Config/Files/XML/NiklasSchmittCSPViolation.xml"/>
+        <File Permission="660" Location="Kernel/GenericInterface/Operation/CSP/Violation.pm"/>
+        <File Permission="660" Location="Kernel/Language/de_NiklasSchmittCSPViolation.pm"/>
+        <File Permission="660" Location="var/packagesetup/NiklasSchmittCSPViolation.pm"/>
+        <File Permission="660" Location="var/webservices/examples/CSPViolation.yml"/>
+    </Filelist>
+    <CodeReinstall Type="post"><![CDATA[
+        $Kernel::OM->Get('var::packagesetup::NiklasSchmittCSPViolation')->CodeReinstall();
+    ]]></CodeReinstall>
+    <CodeInstall Type="post"><![CDATA[
+        $Kernel::OM->Get('var::packagesetup::NiklasSchmittCSPViolation')->CodeInstall();
+    ]]></CodeInstall>
+    <CodeUninstall Type="pre"><![CDATA[
+        $Kernel::OM->Get('var::packagesetup::NiklasSchmittCSPViolation')->CodeUninstall();
+    ]]></CodeUninstall>
+    <CodeUpgrade Type="post"><![CDATA[
+        $Kernel::OM->Get('var::packagesetup::NiklasSchmittCSPViolation')->CodeUpgrade();
+    ]]></CodeUpgrade>
+</otrs_package>

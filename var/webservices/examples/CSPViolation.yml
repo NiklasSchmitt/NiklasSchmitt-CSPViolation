@@ -1,0 +1,42 @@
+---
+Debugger:
+  DebugThreshold: debug
+  TestMode: '0'
+Description: Endpoint to receive Content-Security-Policy Violations
+FrameworkVersion: 6.5.x
+Provider:
+  Operation:
+    Violation:
+      Description: Endpoint for CSP-Violations
+      IncludeTicketData: '0'
+      MappingInbound:
+        Config:
+          KeyMapDefault:
+            MapTo: ''
+            MapType: Keep
+          KeyMapExact:
+            csp-report: Report
+          ValueMapDefault:
+            MapTo: ''
+            MapType: Keep
+        Type: Simple
+      MappingOutbound:
+        Type: Simple
+      Type: CSP::Violation
+  Transport:
+    Config:
+      AdditionalHeaders: ~
+      KeepAlive: ''
+      MaxLength: '4096'
+      RouteOperationMapping:
+        Violation:
+          ParserBackend: JSON
+          RequestMethod:
+          - GET
+          - POST
+          Route: /Violation
+    Type: HTTP::REST
+RemoteSystem: ''
+Requester:
+  Transport:
+    Type: ''
