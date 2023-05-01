@@ -6,8 +6,9 @@
     <Vendor>Niklas Schmitt</Vendor>
     <URL>https://niklas-schmitt.de</URL>
     <License>GNU AFFERO GENERAL PUBLIC LICENSE Version 3, November 2007</License>
-    <Description Lang="en">Receive information about violations against Contet-Security-Policy via Znuny webservice.</Description>
-    <Description Lang="de">Erhalte Informationen bei Verstößen gegen die Contet-Security-Policy über einen Znuny Webservice.</Description>
+    <Description Lang="en">Receive information about violations against Content-Security-Policy via Znuny webservice.</Description>
+    <Description Lang="de">Erhalte Informationen bei Verstößen gegen die Content-Security-Policy über einen Znuny Webservice.</Description>
+    <ChangeLog Version="1.0.0" Date="2023-05-01 13:12:00 +0200">Initial release.</ChangeLog>
     <Filelist>
         <File Permission="660" Location="Kernel/Autoload/NiklasSchmittCSPViolation.pm"/>
         <File Permission="660" Location="Kernel/Config/Files/XML/NiklasSchmittCSPViolation.xml"/>

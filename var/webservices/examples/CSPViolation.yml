@@ -32,7 +32,6 @@ Provider:
         Violation:
           ParserBackend: JSON
           RequestMethod:
-          - GET
           - POST
           Route: /Violation
     Type: HTTP::REST
